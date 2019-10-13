@@ -1,15 +1,15 @@
 # Docker image containing MQTT(Mosquitto server), Kafka(Zookeeper cluster), Kafka Connect(middleware)  MongoDb(sink)
 
-- send events in MQTT format from MQTT client to Kafka topic (a producer) which will then be read by a Kafka consumer
-- The consumer application must then store the consumed data to a PostgreSQL database.
+send events in MQTT format from MQTT client to Kafka topic (a producer) which will then be read, consume and stored in MongoDb
 
-##To Run
+
+## To Run
 
 ---
 
 **Make sure docker is installed**
 ```
-_docker-compose up "docker_compose.yml"
+docker-compose up "docker_compose.yml"
 ```
 
 **Extract custom/*/* jars to /custom/jars/ . Kafka Connect requires the 3rd party MQTT and Mongodb jars**
